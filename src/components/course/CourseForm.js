@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
+import InvestmentCostDetails from './InvestmentCostDetails';
 
 const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) => {
   return (
@@ -34,6 +35,8 @@ const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) => {
         value={course.length}
         onChange={onChange}
         error={errors.length}/>
+
+      <InvestmentCostDetails />
 
       <input
         type="submit"

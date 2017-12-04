@@ -19,4 +19,4 @@ Header.propTypes = {
     loading: PropTypes.bool.isRequired
 };
 
-export default Header;   
+export default Header;
