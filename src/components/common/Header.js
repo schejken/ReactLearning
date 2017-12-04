@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import { Link, IndexLink} from 'react-router';
-import LoadingDots from './LoadingDots';
+import BubblePreloader from 'react-bubble-preloader';
 
 const Header = ({loading}) => {
     return (
@@ -10,7 +10,14 @@ const Header = ({loading}) => {
             <Link to="/courses" activeClassName="active">Courses</Link>
             {" | "}
             <Link to="/about" activeClassName="active">About</Link>
-            {loading && <LoadingDots interval={100} dots={20} />}
+            {" | "}
+            <Link to="/devsite" activeClassName="active">DevSite</Link>
+            {loading && <BubblePreloader 
+                bubble={{ width: '2rem', height: '2rem' }}
+                animation={{ speed: 2 }}
+                className="your-own-class__if-you-need-it"
+                colors={['red', 'blue', 'yellow']}
+                />}
         </nav>
     );
 };
